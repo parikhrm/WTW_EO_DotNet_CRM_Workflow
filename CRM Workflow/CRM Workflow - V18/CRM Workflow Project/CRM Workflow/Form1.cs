@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Configuration;
 using System.IO;
+using System.Security.Permissions;
 
 namespace CRM_Workflow
 {
@@ -151,7 +152,7 @@ namespace CRM_Workflow
                 if (string.IsNullOrEmpty(searchby_requestid.Text) && string.IsNullOrEmpty(searchby_associatename.Text) && string.IsNullOrEmpty(searchby_requeststatus.Text) && string.IsNullOrEmpty(searchby_partyname.Text) && string.IsNullOrEmpty(searchby_wftrequestid.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select top 100 RequestID,RequestType,ReceivedDate,ReceivedTime,Volumes,PartyName,PartyLocation,AssociateName,QueryRaisedDate,QueryRaisedTime,TypeOfQuery,QueryResolvedDate,QueryResolvedTime,QueryResolvedBy,CompletionDate,CompletionTime,RequestorBusinessUnit,RequestorEmailAddress,RequestorSegmentName,Comments,RequestorOffice,FoundInFactiva,QueryChaser1Sent_Status_Date,QueryChaser2Sent_Status_Date,QueryChaser1_SentBy,QueryChaser2_SentBy,WFT_RequestID,Termination_Status from dbo.tbl_crm_daily_dotnet with(nolock) where  convert(date,receiveddate) between convert(date,dateadd(yy,-1,getdate())) and convert(date,getdate()) and isdeleted = 0 order by requestid desc";
+                    cmd.CommandText = "select top 100 RequestID,RequestType,ReceivedDate,ReceivedTime,Volumes,PartyName,PartyLocation,AssociateName,QueryRaisedDate,QueryRaisedTime,TypeOfQuery,QueryResolvedDate,QueryResolvedTime,QueryResolvedBy,CompletionDate,CompletionTime,RequestorBusinessUnit,RequestorEmailAddress,RequestorSegmentName,Comments,RequestorOffice,FoundInFactiva,QueryChaser1Sent_Status_Date,QueryChaser2Sent_Status_Date,QueryChaser1_SentBy,QueryChaser2_SentBy,WFT_RequestID,Termination_Status,Synthetic_Approval_RaisedDate,Synthetic_Approval_Raisedtime,Synthetic_Approval_ReceivedDate,Synthetic_Approval_ReceivedTime from dbo.tbl_crm_daily_dotnet with(nolock) where  convert(date,receiveddate) between convert(date,dateadd(yy,-1,getdate())) and convert(date,getdate()) and isdeleted = 0 order by requestid desc";
                 }
                 else
                 {
@@ -367,6 +368,10 @@ namespace CRM_Workflow
             datagridview.Enabled = false;
             requestorbusinessunit.SelectedIndex = -1;
             requestorsegmentname.SelectedIndex = -1;
+            synthetic_approval_raiseddate.CustomFormat = " ";
+            synthetic_approval_raisedtime.CustomFormat = " ";
+            synthetic_approval_receiveddate.CustomFormat = " ";
+            synthetic_approval_receivedtime.CustomFormat = " ";
         }
 
         public void empdetails_checkaccess()
@@ -816,11 +821,35 @@ namespace CRM_Workflow
                     cmd.CommandText = "dbo.usp_crm_insert_dotnet";
                     //cmd.CommandText = "insert into tbl_crm_daily_dotnet (RequestType,ReceivedDate,ReceivedTime,Volumes,PartyName,PartyLocation,UpdatedLegalEntityName,TypeOfParty,ValidationSource,AssociateName,QueryRaisedDate,QueryRaisedTime,TypeOfQuery,QueryResolvedDate,QueryResolvedTime,QueryResolvedBy,CompletionDate,CompletionTime,InvestigationPlaced,InvestigationRaisedDate,InvestigationRaisedTime,ReportReceivedDate,ReportReceivedTime,TypeOfUpdateRequired,RequestorBusinessUnit,RequestorEmailAddress,RequestorSegmentName,Comments,LastUpdateDateTime,RequestorOffice,LastUpdatedBy,MachineName,IsDeleted) values(@RequestTypeparam,@ReceivedDateparam,@ReceivedTimeparam,@Volumesparam,@PartyNameparam,@PartyLocationparam,@UpdatedLegalEntityNameparam,@TypeOfPartyparam,@ValidationSourceparam,@AssociateNameparam,@QueryRaisedDateparam,@QueryRaisedTimeparam,@TypeOfQueryparam,@QueryResolvedDateparam,@QueryResolvedTimeparam,@QueryResolvedByparam,@CompletionDateparam,@CompletionTimeparam,@InvestigationPlacedparam,@InvestigationRaisedDateparam,@InvestigationRaisedTimeparam,@ReportReceivedDateparam,@ReportReceivedTimeparam,@TypeOfUpdateRequiredparam,@RequestorBusinessUnitparam,@RequestorEmailAddressparam,@RequestorSegmentNameparam,@Commentsparam,@LastUpdateDateTimeparam,@RequestorOfficeparam,@LastUpdatedByparam,@MachineNameparam,0)";
                     cmd.Parameters.AddWithValue("@RequestTypeparam", requesttype.Text);
+                    
+                    if(synthetic_approval_raiseddate.Text.Trim() != string.Empty)
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate",synthetic_approval_raiseddate.Value.Date);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime",synthetic_approval_raisedtime.Value.ToLongTimeString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate", DBNull.Value);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime", DBNull.Value);
+                    }
+
+                    if (synthetic_approval_receiveddate.Text.Trim() != string.Empty)
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", synthetic_approval_receiveddate.Value.Date);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", synthetic_approval_receivedtime.Value.ToLongTimeString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", DBNull.Value);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", DBNull.Value);
+                    }
+
+
                     if (chaser1sent.Checked == true)
                     {
                         cmd.Parameters.AddWithValue("@QueryChaser1Sent_Statusparam", 1);
                         cmd.Parameters.AddWithValue("@QueryChaser1Sent_Status_Dateparam", chaser1_sentdate.Value.Date);
-                        cmd.Parameters.AddWithValue("@QueryChaser1_SentBy",chaser1_sentby.Text);
+                        cmd.Parameters.AddWithValue("@QueryChaser1_SentBy", chaser1_sentby.Text);
                     }
                     else
                     {
@@ -1009,7 +1038,7 @@ namespace CRM_Workflow
                         cmd.Parameters.AddWithValue("@terminationstatus", "No");
                     }
 
-                    
+
 
                     //if conditions
                     if (receiveddate.Value.Date > today.Value.Date)
@@ -1184,6 +1213,22 @@ namespace CRM_Workflow
                     //{
                     //    MessageBox.Show("Please select Quality Parameters");
                     //}
+                    else if(synthetic_approval_raiseddate.Text.Trim() != string.Empty && synthetic_approval_raisedtime.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_Raisedtime");
+                    }
+                    else if (synthetic_approval_raiseddate.Text.Trim() == string.Empty && synthetic_approval_raisedtime.Text.Trim() != string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_RaisedDate");
+                    }
+                    else if(synthetic_approval_receiveddate.Text.Trim() != string.Empty && synthetic_approval_receivedtime.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_ReceivedTime");
+                    }
+                    else if (synthetic_approval_receiveddate.Text.Trim() == string.Empty && synthetic_approval_receivedtime.Text.Trim() != string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_ReceivedDate");
+                    }
                     else
                     {
                         conn.Open();
@@ -1231,6 +1276,27 @@ namespace CRM_Workflow
                     cmd.CommandText = "dbo.usp_crm_update_dotnet";
                     //cmd.CommandText = "update tbl_crm_daily_dotnet set RequestType=@RequestTypeparam1,ReceivedDate=@ReceivedDateparam1,ReceivedTime=@ReceivedTimeparam1,Volumes=@Volumesparam1,PartyName=@PartyNameparam1,PartyLocation=@PartyLocationparam1,UpdatedLegalEntityName=@UpdatedLegalEntityNameparam1,TypeOfParty=@TypeOfPartyparam1,ValidationSource=@ValidationSourceparam1,AssociateName=@AssociateNameparam1,QueryRaisedDate=@QueryRaisedDateparam1,QueryRaisedTime=@QueryRaisedTimeparam1,TypeOfQuery=@TypeOfQueryparam1,QueryResolvedDate=@QueryResolvedDateparam1,QueryResolvedTime=@QueryResolvedTimeparam1,QueryResolvedBy=@QueryResolvedByparam1,CompletionDate=@CompletionDateparam1,CompletionTime=@CompletionTimeparam1,InvestigationPlaced=@InvestigationPlacedparam1,InvestigationRaisedDate=@InvestigationRaisedDateparam1,InvestigationRaisedTime=@InvestigationRaisedTimeparam1,ReportReceivedDate=@ReportReceivedDateparam1,ReportReceivedTime=@ReportReceivedTimeparam1,TypeOfUpdateRequired=@TypeOfUpdateRequiredparam1,RequestorBusinessUnit=@RequestorBusinessUnitparam1,RequestorEmailAddress=@RequestorEmailAddressparam1,RequestorSegmentName=@RequestorSegmentNameparam1,Comments=@Commentsparam1,LastUpdateDateTime=@LastUpdateDateTimeparam,RequestorOffice=@RequestorOfficeparam,LastUpdatedBy=@LastUpdatedByparam,MachineName=@MachineNameparam where requestid=@requestidparam1";
                     cmd.Parameters.AddWithValue("@requestid", requestid.Text);
+                    if (synthetic_approval_raiseddate.Text.Trim() != string.Empty)
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate", synthetic_approval_raiseddate.Value.Date);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime", synthetic_approval_raisedtime.Value.ToLongTimeString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate", DBNull.Value);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime", DBNull.Value);
+                    }
+
+                    if (synthetic_approval_receiveddate.Text.Trim() != string.Empty)
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", synthetic_approval_receiveddate.Value.Date);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", synthetic_approval_receivedtime.Value.ToLongTimeString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", DBNull.Value);
+                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", DBNull.Value);
+                    }
                     cmd.Parameters.AddWithValue("@RequestTypeparam", requesttype.Text);
                     if (chaser1sent.Checked == true)
                     {
@@ -1600,6 +1666,22 @@ namespace CRM_Workflow
                     //{
                     //    MessageBox.Show("Please select Quality Parameters");
                     //}
+                    else if (synthetic_approval_raiseddate.Text.Trim() != string.Empty && synthetic_approval_raisedtime.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_Raisedtime");
+                    }
+                    else if (synthetic_approval_raiseddate.Text.Trim() == string.Empty && synthetic_approval_raisedtime.Text.Trim() != string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_RaisedDate");
+                    }
+                    else if (synthetic_approval_receiveddate.Text.Trim() != string.Empty && synthetic_approval_receivedtime.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_ReceivedTime");
+                    }
+                    else if (synthetic_approval_receiveddate.Text.Trim() == string.Empty && synthetic_approval_receivedtime.Text.Trim() != string.Empty)
+                    {
+                        MessageBox.Show("Please update Synthetic_Approval_ReceivedDate");
+                    }
                     else
                     {
                         conn.Open();
@@ -1799,6 +1881,33 @@ namespace CRM_Workflow
                         queryresolvedtime.Text = row.Cells["txtQueryResolvedTime3"].Value.ToString();
                         queryresolvedby.Text = row.Cells["txtQueryResolvedBy3"].Value.ToString();
                     }
+                    if (!string.IsNullOrEmpty(row.Cells["txtSynthetic_Approval_RaisedDate_3"].Value.ToString()))
+                    {
+                        synthetic_approval_raiseddate.CustomFormat = "dd-MMMM-yyyy";
+                        synthetic_approval_raiseddate.Text = row.Cells["txtSynthetic_Approval_RaisedDate_3"].Value.ToString();
+                        synthetic_approval_raisedtime.CustomFormat = "HH:mm:ss";
+                        synthetic_approval_raisedtime.Text = row.Cells["txtSynthetic_Approval_Raisedtime_3"].Value.ToString();
+                    }
+                    else
+                    {
+                        synthetic_approval_raiseddate.CustomFormat = " ";
+                        synthetic_approval_raisedtime.CustomFormat = " ";
+                    }
+                    
+
+                    if (!string.IsNullOrEmpty(row.Cells["txtSynthetic_Approval_ReceivedDate_3"].Value.ToString()))
+                    {
+                        synthetic_approval_receiveddate.CustomFormat = "dd-MMMM-yyyy";
+                        synthetic_approval_receiveddate.Text = row.Cells["txtSynthetic_Approval_ReceivedDate_3"].Value.ToString();
+                        synthetic_approval_receivedtime.CustomFormat = "HH:mm:ss";
+                        synthetic_approval_receivedtime.Text = row.Cells["txtSynthetic_Approval_ReceivedTime_3"].Value.ToString();
+                    }
+                    else
+                    {
+                        synthetic_approval_receiveddate.CustomFormat = " ";
+                        synthetic_approval_receivedtime.CustomFormat = " ";
+                    }
+                    
                     if (string.IsNullOrEmpty(row.Cells["txtCompletionDate3"].Value.ToString()))
                     {
                         checkBox3.Checked = false;
@@ -2424,7 +2533,60 @@ namespace CRM_Workflow
             datagridview_display_overall();
         }
 
-       
+        private void synthetic_approval_raiseddate_ValueChanged(object sender, EventArgs e)
+        {
+            synthetic_approval_raiseddate.CustomFormat = "dd-MMMM-yyyy";
+        }
 
+        private void synthetic_approval_raiseddate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Delete || e.KeyCode == Keys.Space || e.KeyCode == Keys.Back)
+            {
+                synthetic_approval_raiseddate.CustomFormat = " ";
+            }
+        }
+
+        private void synthetic_approval_receiveddate_ValueChanged(object sender, EventArgs e)
+        {
+            synthetic_approval_receiveddate.CustomFormat = "dd-MMMM-yyyy";
+        }
+
+        private void synthetic_approval_receiveddate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Delete || e.KeyCode == Keys.Space || e.KeyCode == Keys.Back)
+            {
+                synthetic_approval_receiveddate.CustomFormat = " ";
+            }
+        }
+
+        private void synthetic_approval_raisedtime_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Delete || e.KeyCode == Keys.Space || e.KeyCode == Keys.Back)
+            {
+                synthetic_approval_raisedtime.CustomFormat = " ";
+            }
+        }
+
+        private void synthetic_approval_raisedtime_MouseDown(object sender, MouseEventArgs e)
+        {
+            synthetic_approval_raisedtime.Text = DateTime.Now.ToLongTimeString();
+            synthetic_approval_raisedtime.CustomFormat = "HH:mm:ss";
+        }
+
+        private void synthetic_approval_receivedtime_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Delete || e.KeyCode == Keys.Space || e.KeyCode == Keys.Back)
+            {
+                synthetic_approval_receivedtime.CustomFormat = " ";
+            }
+        }
+
+        private void synthetic_approval_receivedtime_MouseDown(object sender, MouseEventArgs e)
+        {
+            synthetic_approval_receivedtime.Text = DateTime.Now.ToLongTimeString();
+            synthetic_approval_receivedtime.CustomFormat = "HH:mm:ss";
+        }
+
+        
     }
 }

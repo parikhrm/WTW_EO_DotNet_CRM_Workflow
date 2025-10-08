@@ -75,6 +75,41 @@
             this.label33 = new System.Windows.Forms.Label();
             this.searchby_partyname = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label24 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button23 = new System.Windows.Forms.Button();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.foundinfactiva = new System.Windows.Forms.ComboBox();
+            this.chaser1sent = new System.Windows.Forms.CheckBox();
+            this.chaser2sent = new System.Windows.Forms.CheckBox();
+            this.chaser1_sentdate = new System.Windows.Forms.DateTimePicker();
+            this.chaser2_sentdate = new System.Windows.Forms.DateTimePicker();
+            this.chaser1_sentby = new System.Windows.Forms.ComboBox();
+            this.chaser2_sentby = new System.Windows.Forms.ComboBox();
+            this.associatename_check = new System.Windows.Forms.ComboBox();
+            this.qcworkflow = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wftrequestid = new System.Windows.Forms.TextBox();
+            this.checkbox_termination = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.searchby_requestid = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.searchby_associatename = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.searchby_requeststatus = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.searchby_wftrequestid = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.datagridview = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.synthetic_approval_raiseddate = new System.Windows.Forms.DateTimePicker();
+            this.synthetic_approval_raisedtime = new System.Windows.Forms.DateTimePicker();
+            this.synthetic_approval_receiveddate = new System.Windows.Forms.DateTimePicker();
+            this.synthetic_approval_receivedtime = new System.Windows.Forms.DateTimePicker();
             this.txtRequestID3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtRequestType3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtReceivedDate3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,35 +141,10 @@
             this.txtQueryChaser2_SentBy_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtWFT_RequestID_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTermination_Status_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label24 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button23 = new System.Windows.Forms.Button();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.label38 = new System.Windows.Forms.Label();
-            this.foundinfactiva = new System.Windows.Forms.ComboBox();
-            this.chaser1sent = new System.Windows.Forms.CheckBox();
-            this.chaser2sent = new System.Windows.Forms.CheckBox();
-            this.chaser1_sentdate = new System.Windows.Forms.DateTimePicker();
-            this.chaser2_sentdate = new System.Windows.Forms.DateTimePicker();
-            this.chaser1_sentby = new System.Windows.Forms.ComboBox();
-            this.chaser2_sentby = new System.Windows.Forms.ComboBox();
-            this.associatename_check = new System.Windows.Forms.ComboBox();
-            this.qcworkflow = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.wftrequestid = new System.Windows.Forms.TextBox();
-            this.checkbox_termination = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.searchby_requestid = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.searchby_associatename = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.searchby_requeststatus = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.searchby_wftrequestid = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.datagridview = new System.Windows.Forms.Button();
+            this.txtSynthetic_Approval_RaisedDate_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSynthetic_Approval_Raisedtime_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSynthetic_Approval_ReceivedDate_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSynthetic_Approval_ReceivedTime_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.volumes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -410,7 +420,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(0, 335);
+            this.label15.Location = new System.Drawing.Point(0, 427);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(128, 20);
             this.label15.TabIndex = 30;
@@ -420,7 +430,7 @@
             // 
             this.completiondate.CustomFormat = " ";
             this.completiondate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.completiondate.Location = new System.Drawing.Point(195, 335);
+            this.completiondate.Location = new System.Drawing.Point(195, 427);
             this.completiondate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.completiondate.Name = "completiondate";
             this.completiondate.Size = new System.Drawing.Size(216, 26);
@@ -432,7 +442,7 @@
             // 
             this.completiontime.CustomFormat = " ";
             this.completiontime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.completiontime.Location = new System.Drawing.Point(418, 334);
+            this.completiontime.Location = new System.Drawing.Point(418, 426);
             this.completiontime.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.completiontime.Name = "completiontime";
             this.completiontime.ShowUpDown = true;
@@ -445,7 +455,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(0, 477);
+            this.label20.Location = new System.Drawing.Point(0, 542);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(186, 20);
             this.label20.TabIndex = 38;
@@ -455,7 +465,7 @@
             // 
             this.requestorbusinessunit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.requestorbusinessunit.FormattingEnabled = true;
-            this.requestorbusinessunit.Location = new System.Drawing.Point(198, 474);
+            this.requestorbusinessunit.Location = new System.Drawing.Point(198, 539);
             this.requestorbusinessunit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.requestorbusinessunit.Name = "requestorbusinessunit";
             this.requestorbusinessunit.Size = new System.Drawing.Size(309, 28);
@@ -466,7 +476,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(0, 401);
+            this.label21.Location = new System.Drawing.Point(0, 485);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(190, 20);
             this.label21.TabIndex = 34;
@@ -474,7 +484,7 @@
             // 
             // requestoremailaddress
             // 
-            this.requestoremailaddress.Location = new System.Drawing.Point(196, 401);
+            this.requestoremailaddress.Location = new System.Drawing.Point(196, 485);
             this.requestoremailaddress.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.requestoremailaddress.Name = "requestoremailaddress";
             this.requestoremailaddress.Size = new System.Drawing.Size(300, 26);
@@ -484,7 +494,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(0, 547);
+            this.label22.Location = new System.Drawing.Point(0, 624);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(199, 20);
             this.label22.TabIndex = 43;
@@ -494,7 +504,7 @@
             // 
             this.requestorsegmentname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.requestorsegmentname.FormattingEnabled = true;
-            this.requestorsegmentname.Location = new System.Drawing.Point(199, 544);
+            this.requestorsegmentname.Location = new System.Drawing.Point(197, 624);
             this.requestorsegmentname.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.requestorsegmentname.Name = "requestorsegmentname";
             this.requestorsegmentname.Size = new System.Drawing.Size(309, 28);
@@ -504,7 +514,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(0, 605);
+            this.label23.Location = new System.Drawing.Point(0, 670);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(86, 20);
             this.label23.TabIndex = 48;
@@ -512,7 +522,7 @@
             // 
             // Comments
             // 
-            this.Comments.Location = new System.Drawing.Point(199, 605);
+            this.Comments.Location = new System.Drawing.Point(199, 670);
             this.Comments.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Comments.Multiline = true;
             this.Comments.Name = "Comments";
@@ -522,7 +532,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(7, 703);
+            this.button1.Location = new System.Drawing.Point(7, 766);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 49);
@@ -534,7 +544,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(147, 703);
+            this.button2.Location = new System.Drawing.Point(147, 766);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 49);
@@ -546,7 +556,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(290, 703);
+            this.button3.Location = new System.Drawing.Point(290, 766);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(125, 49);
@@ -558,7 +568,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(428, 703);
+            this.button4.Location = new System.Drawing.Point(428, 766);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 49);
@@ -569,10 +579,10 @@
             // 
             // today
             // 
-            this.today.Location = new System.Drawing.Point(600, 649);
+            this.today.Location = new System.Drawing.Point(899, 730);
             this.today.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.today.Name = "today";
-            this.today.Size = new System.Drawing.Size(224, 26);
+            this.today.Size = new System.Drawing.Size(84, 26);
             this.today.TabIndex = 2;
             this.today.Visible = false;
             // 
@@ -603,7 +613,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(554, 335);
+            this.checkBox3.Location = new System.Drawing.Point(554, 427);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(100, 24);
@@ -667,233 +677,21 @@
             this.txtQueryChaser1_SentBy_3,
             this.txtQueryChaser2_SentBy_3,
             this.txtWFT_RequestID_3,
-            this.txtTermination_Status_3});
+            this.txtTermination_Status_3,
+            this.txtSynthetic_Approval_RaisedDate_3,
+            this.txtSynthetic_Approval_Raisedtime_3,
+            this.txtSynthetic_Approval_ReceivedDate_3,
+            this.txtSynthetic_Approval_ReceivedTime_3});
             this.dataGridView3.Location = new System.Drawing.Point(21, 161);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(794, 624);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick_1);
             this.dataGridView3.MouseEnter += new System.EventHandler(this.dataGridView3_MouseEnter);
-            // 
-            // txtRequestID3
-            // 
-            this.txtRequestID3.DataPropertyName = "RequestID";
-            this.txtRequestID3.HeaderText = "RequestID";
-            this.txtRequestID3.Name = "txtRequestID3";
-            this.txtRequestID3.ReadOnly = true;
-            // 
-            // txtRequestType3
-            // 
-            this.txtRequestType3.DataPropertyName = "RequestType";
-            this.txtRequestType3.HeaderText = "RequestType";
-            this.txtRequestType3.Name = "txtRequestType3";
-            this.txtRequestType3.ReadOnly = true;
-            // 
-            // txtReceivedDate3
-            // 
-            this.txtReceivedDate3.DataPropertyName = "ReceivedDate";
-            this.txtReceivedDate3.HeaderText = "ReceivedDate";
-            this.txtReceivedDate3.Name = "txtReceivedDate3";
-            this.txtReceivedDate3.ReadOnly = true;
-            // 
-            // txtReceivedTime3
-            // 
-            this.txtReceivedTime3.DataPropertyName = "ReceivedTime";
-            this.txtReceivedTime3.HeaderText = "ReceivedTime";
-            this.txtReceivedTime3.Name = "txtReceivedTime3";
-            this.txtReceivedTime3.ReadOnly = true;
-            // 
-            // txtVolumes3
-            // 
-            this.txtVolumes3.DataPropertyName = "Volumes";
-            this.txtVolumes3.HeaderText = "Volumes";
-            this.txtVolumes3.Name = "txtVolumes3";
-            this.txtVolumes3.ReadOnly = true;
-            // 
-            // txtPartyName3
-            // 
-            this.txtPartyName3.DataPropertyName = "PartyName";
-            this.txtPartyName3.HeaderText = "PartyName";
-            this.txtPartyName3.Name = "txtPartyName3";
-            this.txtPartyName3.ReadOnly = true;
-            // 
-            // txtPartyLocation3
-            // 
-            this.txtPartyLocation3.DataPropertyName = "PartyLocation";
-            this.txtPartyLocation3.HeaderText = "PartyLocation";
-            this.txtPartyLocation3.Name = "txtPartyLocation3";
-            this.txtPartyLocation3.ReadOnly = true;
-            // 
-            // txtAssociateName3
-            // 
-            this.txtAssociateName3.DataPropertyName = "AssociateName";
-            this.txtAssociateName3.HeaderText = "AssociateName";
-            this.txtAssociateName3.Name = "txtAssociateName3";
-            this.txtAssociateName3.ReadOnly = true;
-            // 
-            // txtQueryRaisedDate3
-            // 
-            this.txtQueryRaisedDate3.DataPropertyName = "QueryRaisedDate";
-            this.txtQueryRaisedDate3.HeaderText = "QueryRaisedDate";
-            this.txtQueryRaisedDate3.Name = "txtQueryRaisedDate3";
-            this.txtQueryRaisedDate3.ReadOnly = true;
-            // 
-            // txtQueryRaisedTime3
-            // 
-            this.txtQueryRaisedTime3.DataPropertyName = "QueryRaisedTime";
-            this.txtQueryRaisedTime3.HeaderText = "QueryRaisedTime";
-            this.txtQueryRaisedTime3.Name = "txtQueryRaisedTime3";
-            this.txtQueryRaisedTime3.ReadOnly = true;
-            // 
-            // txtTypeOfQuery3
-            // 
-            this.txtTypeOfQuery3.DataPropertyName = "TypeOfQuery";
-            this.txtTypeOfQuery3.HeaderText = "TypeOfQuery";
-            this.txtTypeOfQuery3.Name = "txtTypeOfQuery3";
-            this.txtTypeOfQuery3.ReadOnly = true;
-            // 
-            // txtQueryResolvedDate3
-            // 
-            this.txtQueryResolvedDate3.DataPropertyName = "QueryResolvedDate";
-            this.txtQueryResolvedDate3.HeaderText = "QueryResolvedDate";
-            this.txtQueryResolvedDate3.Name = "txtQueryResolvedDate3";
-            this.txtQueryResolvedDate3.ReadOnly = true;
-            // 
-            // txtQueryResolvedTime3
-            // 
-            this.txtQueryResolvedTime3.DataPropertyName = "QueryResolvedTime";
-            this.txtQueryResolvedTime3.HeaderText = "QueryResolvedTime";
-            this.txtQueryResolvedTime3.Name = "txtQueryResolvedTime3";
-            this.txtQueryResolvedTime3.ReadOnly = true;
-            // 
-            // txtQueryResolvedBy3
-            // 
-            this.txtQueryResolvedBy3.DataPropertyName = "QueryResolvedBy";
-            this.txtQueryResolvedBy3.HeaderText = "QueryResolvedBy";
-            this.txtQueryResolvedBy3.Name = "txtQueryResolvedBy3";
-            this.txtQueryResolvedBy3.ReadOnly = true;
-            // 
-            // txtCompletionDate3
-            // 
-            this.txtCompletionDate3.DataPropertyName = "CompletionDate";
-            this.txtCompletionDate3.HeaderText = "CompletionDate";
-            this.txtCompletionDate3.Name = "txtCompletionDate3";
-            this.txtCompletionDate3.ReadOnly = true;
-            // 
-            // txtCompletionTime3
-            // 
-            this.txtCompletionTime3.DataPropertyName = "CompletionTime";
-            this.txtCompletionTime3.HeaderText = "CompletionTime";
-            this.txtCompletionTime3.Name = "txtCompletionTime3";
-            this.txtCompletionTime3.ReadOnly = true;
-            // 
-            // txtRequestorBusinessUnit3
-            // 
-            this.txtRequestorBusinessUnit3.DataPropertyName = "RequestorBusinessUnit";
-            this.txtRequestorBusinessUnit3.HeaderText = "RequestorBusinessUnit";
-            this.txtRequestorBusinessUnit3.Name = "txtRequestorBusinessUnit3";
-            this.txtRequestorBusinessUnit3.ReadOnly = true;
-            // 
-            // txtRequestorEmailAddress3
-            // 
-            this.txtRequestorEmailAddress3.DataPropertyName = "RequestorEmailAddress";
-            this.txtRequestorEmailAddress3.HeaderText = "RequestorEmailAddress";
-            this.txtRequestorEmailAddress3.Name = "txtRequestorEmailAddress3";
-            this.txtRequestorEmailAddress3.ReadOnly = true;
-            // 
-            // txtRequestorSegmentName3
-            // 
-            this.txtRequestorSegmentName3.DataPropertyName = "RequestorSegmentName";
-            this.txtRequestorSegmentName3.HeaderText = "RequestorSegmentName";
-            this.txtRequestorSegmentName3.Name = "txtRequestorSegmentName3";
-            this.txtRequestorSegmentName3.ReadOnly = true;
-            // 
-            // txtComments3
-            // 
-            this.txtComments3.DataPropertyName = "Comments";
-            this.txtComments3.HeaderText = "Comments";
-            this.txtComments3.Name = "txtComments3";
-            this.txtComments3.ReadOnly = true;
-            // 
-            // txtFoundInFactiva3
-            // 
-            this.txtFoundInFactiva3.DataPropertyName = "FoundInFactiva";
-            this.txtFoundInFactiva3.HeaderText = "FoundInFactiva";
-            this.txtFoundInFactiva3.Name = "txtFoundInFactiva3";
-            this.txtFoundInFactiva3.ReadOnly = true;
-            // 
-            // txtQueryChaser1_3
-            // 
-            this.txtQueryChaser1_3.DataPropertyName = "QueryChaser1";
-            this.txtQueryChaser1_3.HeaderText = "QueryChaser1";
-            this.txtQueryChaser1_3.Name = "txtQueryChaser1_3";
-            this.txtQueryChaser1_3.ReadOnly = true;
-            // 
-            // txtQueryChaser2_3
-            // 
-            this.txtQueryChaser2_3.DataPropertyName = "QueryChaser2";
-            this.txtQueryChaser2_3.HeaderText = "QueryChaser2";
-            this.txtQueryChaser2_3.Name = "txtQueryChaser2_3";
-            this.txtQueryChaser2_3.ReadOnly = true;
-            // 
-            // txtQueryChaser1Sent_Status_3
-            // 
-            this.txtQueryChaser1Sent_Status_3.DataPropertyName = "QueryChaser1Sent_Status";
-            this.txtQueryChaser1Sent_Status_3.HeaderText = "QueryChaser1Sent_Status";
-            this.txtQueryChaser1Sent_Status_3.Name = "txtQueryChaser1Sent_Status_3";
-            this.txtQueryChaser1Sent_Status_3.ReadOnly = true;
-            // 
-            // txtQueryChaser2Sent_Status_3
-            // 
-            this.txtQueryChaser2Sent_Status_3.DataPropertyName = "QueryChaser2Sent_Status";
-            this.txtQueryChaser2Sent_Status_3.HeaderText = "QueryChaser2Sent_Status";
-            this.txtQueryChaser2Sent_Status_3.Name = "txtQueryChaser2Sent_Status_3";
-            this.txtQueryChaser2Sent_Status_3.ReadOnly = true;
-            // 
-            // txtQueryChaser1Sent_Status_Date_3
-            // 
-            this.txtQueryChaser1Sent_Status_Date_3.DataPropertyName = "QueryChaser1Sent_Status_Date";
-            this.txtQueryChaser1Sent_Status_Date_3.HeaderText = "QueryChaser1Sent_Status_Date";
-            this.txtQueryChaser1Sent_Status_Date_3.Name = "txtQueryChaser1Sent_Status_Date_3";
-            this.txtQueryChaser1Sent_Status_Date_3.ReadOnly = true;
-            // 
-            // txtQueryChaser2Sent_Status_Date_3
-            // 
-            this.txtQueryChaser2Sent_Status_Date_3.DataPropertyName = "QueryChaser2Sent_Status_Date";
-            this.txtQueryChaser2Sent_Status_Date_3.HeaderText = "QueryChaser2Sent_Status_Date";
-            this.txtQueryChaser2Sent_Status_Date_3.Name = "txtQueryChaser2Sent_Status_Date_3";
-            this.txtQueryChaser2Sent_Status_Date_3.ReadOnly = true;
-            // 
-            // txtQueryChaser1_SentBy_3
-            // 
-            this.txtQueryChaser1_SentBy_3.DataPropertyName = "QueryChaser1_SentBy";
-            this.txtQueryChaser1_SentBy_3.HeaderText = "QueryChaser1_SentBy";
-            this.txtQueryChaser1_SentBy_3.Name = "txtQueryChaser1_SentBy_3";
-            this.txtQueryChaser1_SentBy_3.ReadOnly = true;
-            // 
-            // txtQueryChaser2_SentBy_3
-            // 
-            this.txtQueryChaser2_SentBy_3.DataPropertyName = "QueryChaser2_SentBy";
-            this.txtQueryChaser2_SentBy_3.HeaderText = "QueryChaser2_SentBy";
-            this.txtQueryChaser2_SentBy_3.Name = "txtQueryChaser2_SentBy_3";
-            this.txtQueryChaser2_SentBy_3.ReadOnly = true;
-            // 
-            // txtWFT_RequestID_3
-            // 
-            this.txtWFT_RequestID_3.DataPropertyName = "WFT_RequestID";
-            this.txtWFT_RequestID_3.HeaderText = "WFT_RequestID";
-            this.txtWFT_RequestID_3.Name = "txtWFT_RequestID_3";
-            this.txtWFT_RequestID_3.ReadOnly = true;
-            // 
-            // txtTermination_Status_3
-            // 
-            this.txtTermination_Status_3.DataPropertyName = "Termination_Status";
-            this.txtTermination_Status_3.HeaderText = "Termination_Status";
-            this.txtTermination_Status_3.Name = "txtTermination_Status_3";
-            this.txtTermination_Status_3.ReadOnly = true;
             // 
             // label24
             // 
@@ -923,7 +721,7 @@
             // 
             this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(610, 703);
+            this.button23.Location = new System.Drawing.Point(610, 766);
             this.button23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(220, 49);
@@ -977,7 +775,7 @@
             // chaser1sent
             // 
             this.chaser1sent.AutoSize = true;
-            this.chaser1sent.Location = new System.Drawing.Point(513, 466);
+            this.chaser1sent.Location = new System.Drawing.Point(513, 531);
             this.chaser1sent.Name = "chaser1sent";
             this.chaser1sent.Size = new System.Drawing.Size(95, 44);
             this.chaser1sent.TabIndex = 40;
@@ -988,7 +786,7 @@
             // chaser2sent
             // 
             this.chaser2sent.AutoSize = true;
-            this.chaser2sent.Location = new System.Drawing.Point(512, 536);
+            this.chaser2sent.Location = new System.Drawing.Point(512, 624);
             this.chaser2sent.Name = "chaser2sent";
             this.chaser2sent.Size = new System.Drawing.Size(95, 44);
             this.chaser2sent.TabIndex = 45;
@@ -999,7 +797,7 @@
             // 
             this.chaser1_sentdate.CustomFormat = " ";
             this.chaser1_sentdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.chaser1_sentdate.Location = new System.Drawing.Point(611, 476);
+            this.chaser1_sentdate.Location = new System.Drawing.Point(611, 541);
             this.chaser1_sentdate.Name = "chaser1_sentdate";
             this.chaser1_sentdate.Size = new System.Drawing.Size(224, 26);
             this.chaser1_sentdate.TabIndex = 41;
@@ -1010,7 +808,7 @@
             // 
             this.chaser2_sentdate.CustomFormat = " ";
             this.chaser2_sentdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.chaser2_sentdate.Location = new System.Drawing.Point(612, 533);
+            this.chaser2_sentdate.Location = new System.Drawing.Point(607, 624);
             this.chaser2_sentdate.Name = "chaser2_sentdate";
             this.chaser2_sentdate.Size = new System.Drawing.Size(223, 26);
             this.chaser2_sentdate.TabIndex = 46;
@@ -1021,7 +819,7 @@
             // 
             this.chaser1_sentby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chaser1_sentby.FormattingEnabled = true;
-            this.chaser1_sentby.Location = new System.Drawing.Point(842, 476);
+            this.chaser1_sentby.Location = new System.Drawing.Point(842, 541);
             this.chaser1_sentby.Name = "chaser1_sentby";
             this.chaser1_sentby.Size = new System.Drawing.Size(186, 28);
             this.chaser1_sentby.TabIndex = 42;
@@ -1030,7 +828,7 @@
             // 
             this.chaser2_sentby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chaser2_sentby.FormattingEnabled = true;
-            this.chaser2_sentby.Location = new System.Drawing.Point(843, 533);
+            this.chaser2_sentby.Location = new System.Drawing.Point(843, 621);
             this.chaser2_sentby.Name = "chaser2_sentby";
             this.chaser2_sentby.Size = new System.Drawing.Size(185, 28);
             this.chaser2_sentby.TabIndex = 47;
@@ -1048,7 +846,7 @@
             // 
             this.qcworkflow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.qcworkflow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qcworkflow.Location = new System.Drawing.Point(838, 703);
+            this.qcworkflow.Location = new System.Drawing.Point(838, 766);
             this.qcworkflow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.qcworkflow.Name = "qcworkflow";
             this.qcworkflow.Size = new System.Drawing.Size(189, 49);
@@ -1060,7 +858,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(551, 401);
+            this.label7.Location = new System.Drawing.Point(551, 485);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 20);
             this.label7.TabIndex = 36;
@@ -1068,7 +866,7 @@
             // 
             // wftrequestid
             // 
-            this.wftrequestid.Location = new System.Drawing.Point(695, 401);
+            this.wftrequestid.Location = new System.Drawing.Point(695, 485);
             this.wftrequestid.Name = "wftrequestid";
             this.wftrequestid.Size = new System.Drawing.Size(156, 26);
             this.wftrequestid.TabIndex = 37;
@@ -1076,7 +874,7 @@
             // checkbox_termination
             // 
             this.checkbox_termination.AutoSize = true;
-            this.checkbox_termination.Location = new System.Drawing.Point(594, 605);
+            this.checkbox_termination.Location = new System.Drawing.Point(594, 681);
             this.checkbox_termination.Name = "checkbox_termination";
             this.checkbox_termination.Size = new System.Drawing.Size(118, 24);
             this.checkbox_termination.TabIndex = 50;
@@ -1196,12 +994,397 @@
             this.datagridview.Text = "Data Grid View";
             this.datagridview.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(0, 352);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(141, 40);
+            this.label18.TabIndex = 94;
+            this.label18.Text = "Synthetic Approval\r\nRaised Date";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(436, 352);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 40);
+            this.label19.TabIndex = 95;
+            this.label19.Text = "Synthtic Approval\r\nReceived Date";
+            // 
+            // synthetic_approval_raiseddate
+            // 
+            this.synthetic_approval_raiseddate.CustomFormat = " ";
+            this.synthetic_approval_raiseddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.synthetic_approval_raiseddate.Location = new System.Drawing.Point(195, 352);
+            this.synthetic_approval_raiseddate.Name = "synthetic_approval_raiseddate";
+            this.synthetic_approval_raiseddate.Size = new System.Drawing.Size(220, 26);
+            this.synthetic_approval_raiseddate.TabIndex = 96;
+            this.synthetic_approval_raiseddate.ValueChanged += new System.EventHandler(this.synthetic_approval_raiseddate_ValueChanged);
+            this.synthetic_approval_raiseddate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.synthetic_approval_raiseddate_KeyDown);
+            // 
+            // synthetic_approval_raisedtime
+            // 
+            this.synthetic_approval_raisedtime.CustomFormat = " ";
+            this.synthetic_approval_raisedtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.synthetic_approval_raisedtime.Location = new System.Drawing.Point(195, 387);
+            this.synthetic_approval_raisedtime.Name = "synthetic_approval_raisedtime";
+            this.synthetic_approval_raisedtime.ShowUpDown = true;
+            this.synthetic_approval_raisedtime.Size = new System.Drawing.Size(112, 26);
+            this.synthetic_approval_raisedtime.TabIndex = 97;
+            this.synthetic_approval_raisedtime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.synthetic_approval_raisedtime_KeyDown);
+            this.synthetic_approval_raisedtime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.synthetic_approval_raisedtime_MouseDown);
+            // 
+            // synthetic_approval_receiveddate
+            // 
+            this.synthetic_approval_receiveddate.CustomFormat = " ";
+            this.synthetic_approval_receiveddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.synthetic_approval_receiveddate.Location = new System.Drawing.Point(594, 352);
+            this.synthetic_approval_receiveddate.Name = "synthetic_approval_receiveddate";
+            this.synthetic_approval_receiveddate.Size = new System.Drawing.Size(228, 26);
+            this.synthetic_approval_receiveddate.TabIndex = 98;
+            this.synthetic_approval_receiveddate.ValueChanged += new System.EventHandler(this.synthetic_approval_receiveddate_ValueChanged);
+            this.synthetic_approval_receiveddate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.synthetic_approval_receiveddate_KeyDown);
+            // 
+            // synthetic_approval_receivedtime
+            // 
+            this.synthetic_approval_receivedtime.CustomFormat = " ";
+            this.synthetic_approval_receivedtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.synthetic_approval_receivedtime.Location = new System.Drawing.Point(594, 387);
+            this.synthetic_approval_receivedtime.Name = "synthetic_approval_receivedtime";
+            this.synthetic_approval_receivedtime.ShowUpDown = true;
+            this.synthetic_approval_receivedtime.Size = new System.Drawing.Size(122, 26);
+            this.synthetic_approval_receivedtime.TabIndex = 99;
+            this.synthetic_approval_receivedtime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.synthetic_approval_receivedtime_KeyDown);
+            this.synthetic_approval_receivedtime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.synthetic_approval_receivedtime_MouseDown);
+            // 
+            // txtRequestID3
+            // 
+            this.txtRequestID3.DataPropertyName = "RequestID";
+            this.txtRequestID3.HeaderText = "RequestID";
+            this.txtRequestID3.MinimumWidth = 8;
+            this.txtRequestID3.Name = "txtRequestID3";
+            this.txtRequestID3.ReadOnly = true;
+            this.txtRequestID3.Width = 150;
+            // 
+            // txtRequestType3
+            // 
+            this.txtRequestType3.DataPropertyName = "RequestType";
+            this.txtRequestType3.HeaderText = "RequestType";
+            this.txtRequestType3.MinimumWidth = 8;
+            this.txtRequestType3.Name = "txtRequestType3";
+            this.txtRequestType3.ReadOnly = true;
+            this.txtRequestType3.Width = 150;
+            // 
+            // txtReceivedDate3
+            // 
+            this.txtReceivedDate3.DataPropertyName = "ReceivedDate";
+            this.txtReceivedDate3.HeaderText = "ReceivedDate";
+            this.txtReceivedDate3.MinimumWidth = 8;
+            this.txtReceivedDate3.Name = "txtReceivedDate3";
+            this.txtReceivedDate3.ReadOnly = true;
+            this.txtReceivedDate3.Width = 150;
+            // 
+            // txtReceivedTime3
+            // 
+            this.txtReceivedTime3.DataPropertyName = "ReceivedTime";
+            this.txtReceivedTime3.HeaderText = "ReceivedTime";
+            this.txtReceivedTime3.MinimumWidth = 8;
+            this.txtReceivedTime3.Name = "txtReceivedTime3";
+            this.txtReceivedTime3.ReadOnly = true;
+            this.txtReceivedTime3.Width = 150;
+            // 
+            // txtVolumes3
+            // 
+            this.txtVolumes3.DataPropertyName = "Volumes";
+            this.txtVolumes3.HeaderText = "Volumes";
+            this.txtVolumes3.MinimumWidth = 8;
+            this.txtVolumes3.Name = "txtVolumes3";
+            this.txtVolumes3.ReadOnly = true;
+            this.txtVolumes3.Width = 150;
+            // 
+            // txtPartyName3
+            // 
+            this.txtPartyName3.DataPropertyName = "PartyName";
+            this.txtPartyName3.HeaderText = "PartyName";
+            this.txtPartyName3.MinimumWidth = 8;
+            this.txtPartyName3.Name = "txtPartyName3";
+            this.txtPartyName3.ReadOnly = true;
+            this.txtPartyName3.Width = 150;
+            // 
+            // txtPartyLocation3
+            // 
+            this.txtPartyLocation3.DataPropertyName = "PartyLocation";
+            this.txtPartyLocation3.HeaderText = "PartyLocation";
+            this.txtPartyLocation3.MinimumWidth = 8;
+            this.txtPartyLocation3.Name = "txtPartyLocation3";
+            this.txtPartyLocation3.ReadOnly = true;
+            this.txtPartyLocation3.Width = 150;
+            // 
+            // txtAssociateName3
+            // 
+            this.txtAssociateName3.DataPropertyName = "AssociateName";
+            this.txtAssociateName3.HeaderText = "AssociateName";
+            this.txtAssociateName3.MinimumWidth = 8;
+            this.txtAssociateName3.Name = "txtAssociateName3";
+            this.txtAssociateName3.ReadOnly = true;
+            this.txtAssociateName3.Width = 150;
+            // 
+            // txtQueryRaisedDate3
+            // 
+            this.txtQueryRaisedDate3.DataPropertyName = "QueryRaisedDate";
+            this.txtQueryRaisedDate3.HeaderText = "QueryRaisedDate";
+            this.txtQueryRaisedDate3.MinimumWidth = 8;
+            this.txtQueryRaisedDate3.Name = "txtQueryRaisedDate3";
+            this.txtQueryRaisedDate3.ReadOnly = true;
+            this.txtQueryRaisedDate3.Width = 150;
+            // 
+            // txtQueryRaisedTime3
+            // 
+            this.txtQueryRaisedTime3.DataPropertyName = "QueryRaisedTime";
+            this.txtQueryRaisedTime3.HeaderText = "QueryRaisedTime";
+            this.txtQueryRaisedTime3.MinimumWidth = 8;
+            this.txtQueryRaisedTime3.Name = "txtQueryRaisedTime3";
+            this.txtQueryRaisedTime3.ReadOnly = true;
+            this.txtQueryRaisedTime3.Width = 150;
+            // 
+            // txtTypeOfQuery3
+            // 
+            this.txtTypeOfQuery3.DataPropertyName = "TypeOfQuery";
+            this.txtTypeOfQuery3.HeaderText = "TypeOfQuery";
+            this.txtTypeOfQuery3.MinimumWidth = 8;
+            this.txtTypeOfQuery3.Name = "txtTypeOfQuery3";
+            this.txtTypeOfQuery3.ReadOnly = true;
+            this.txtTypeOfQuery3.Width = 150;
+            // 
+            // txtQueryResolvedDate3
+            // 
+            this.txtQueryResolvedDate3.DataPropertyName = "QueryResolvedDate";
+            this.txtQueryResolvedDate3.HeaderText = "QueryResolvedDate";
+            this.txtQueryResolvedDate3.MinimumWidth = 8;
+            this.txtQueryResolvedDate3.Name = "txtQueryResolvedDate3";
+            this.txtQueryResolvedDate3.ReadOnly = true;
+            this.txtQueryResolvedDate3.Width = 150;
+            // 
+            // txtQueryResolvedTime3
+            // 
+            this.txtQueryResolvedTime3.DataPropertyName = "QueryResolvedTime";
+            this.txtQueryResolvedTime3.HeaderText = "QueryResolvedTime";
+            this.txtQueryResolvedTime3.MinimumWidth = 8;
+            this.txtQueryResolvedTime3.Name = "txtQueryResolvedTime3";
+            this.txtQueryResolvedTime3.ReadOnly = true;
+            this.txtQueryResolvedTime3.Width = 150;
+            // 
+            // txtQueryResolvedBy3
+            // 
+            this.txtQueryResolvedBy3.DataPropertyName = "QueryResolvedBy";
+            this.txtQueryResolvedBy3.HeaderText = "QueryResolvedBy";
+            this.txtQueryResolvedBy3.MinimumWidth = 8;
+            this.txtQueryResolvedBy3.Name = "txtQueryResolvedBy3";
+            this.txtQueryResolvedBy3.ReadOnly = true;
+            this.txtQueryResolvedBy3.Width = 150;
+            // 
+            // txtCompletionDate3
+            // 
+            this.txtCompletionDate3.DataPropertyName = "CompletionDate";
+            this.txtCompletionDate3.HeaderText = "CompletionDate";
+            this.txtCompletionDate3.MinimumWidth = 8;
+            this.txtCompletionDate3.Name = "txtCompletionDate3";
+            this.txtCompletionDate3.ReadOnly = true;
+            this.txtCompletionDate3.Width = 150;
+            // 
+            // txtCompletionTime3
+            // 
+            this.txtCompletionTime3.DataPropertyName = "CompletionTime";
+            this.txtCompletionTime3.HeaderText = "CompletionTime";
+            this.txtCompletionTime3.MinimumWidth = 8;
+            this.txtCompletionTime3.Name = "txtCompletionTime3";
+            this.txtCompletionTime3.ReadOnly = true;
+            this.txtCompletionTime3.Width = 150;
+            // 
+            // txtRequestorBusinessUnit3
+            // 
+            this.txtRequestorBusinessUnit3.DataPropertyName = "RequestorBusinessUnit";
+            this.txtRequestorBusinessUnit3.HeaderText = "RequestorBusinessUnit";
+            this.txtRequestorBusinessUnit3.MinimumWidth = 8;
+            this.txtRequestorBusinessUnit3.Name = "txtRequestorBusinessUnit3";
+            this.txtRequestorBusinessUnit3.ReadOnly = true;
+            this.txtRequestorBusinessUnit3.Width = 150;
+            // 
+            // txtRequestorEmailAddress3
+            // 
+            this.txtRequestorEmailAddress3.DataPropertyName = "RequestorEmailAddress";
+            this.txtRequestorEmailAddress3.HeaderText = "RequestorEmailAddress";
+            this.txtRequestorEmailAddress3.MinimumWidth = 8;
+            this.txtRequestorEmailAddress3.Name = "txtRequestorEmailAddress3";
+            this.txtRequestorEmailAddress3.ReadOnly = true;
+            this.txtRequestorEmailAddress3.Width = 150;
+            // 
+            // txtRequestorSegmentName3
+            // 
+            this.txtRequestorSegmentName3.DataPropertyName = "RequestorSegmentName";
+            this.txtRequestorSegmentName3.HeaderText = "RequestorSegmentName";
+            this.txtRequestorSegmentName3.MinimumWidth = 8;
+            this.txtRequestorSegmentName3.Name = "txtRequestorSegmentName3";
+            this.txtRequestorSegmentName3.ReadOnly = true;
+            this.txtRequestorSegmentName3.Width = 150;
+            // 
+            // txtComments3
+            // 
+            this.txtComments3.DataPropertyName = "Comments";
+            this.txtComments3.HeaderText = "Comments";
+            this.txtComments3.MinimumWidth = 8;
+            this.txtComments3.Name = "txtComments3";
+            this.txtComments3.ReadOnly = true;
+            this.txtComments3.Width = 150;
+            // 
+            // txtFoundInFactiva3
+            // 
+            this.txtFoundInFactiva3.DataPropertyName = "FoundInFactiva";
+            this.txtFoundInFactiva3.HeaderText = "FoundInFactiva";
+            this.txtFoundInFactiva3.MinimumWidth = 8;
+            this.txtFoundInFactiva3.Name = "txtFoundInFactiva3";
+            this.txtFoundInFactiva3.ReadOnly = true;
+            this.txtFoundInFactiva3.Width = 150;
+            // 
+            // txtQueryChaser1_3
+            // 
+            this.txtQueryChaser1_3.DataPropertyName = "QueryChaser1";
+            this.txtQueryChaser1_3.HeaderText = "QueryChaser1";
+            this.txtQueryChaser1_3.MinimumWidth = 8;
+            this.txtQueryChaser1_3.Name = "txtQueryChaser1_3";
+            this.txtQueryChaser1_3.ReadOnly = true;
+            this.txtQueryChaser1_3.Width = 150;
+            // 
+            // txtQueryChaser2_3
+            // 
+            this.txtQueryChaser2_3.DataPropertyName = "QueryChaser2";
+            this.txtQueryChaser2_3.HeaderText = "QueryChaser2";
+            this.txtQueryChaser2_3.MinimumWidth = 8;
+            this.txtQueryChaser2_3.Name = "txtQueryChaser2_3";
+            this.txtQueryChaser2_3.ReadOnly = true;
+            this.txtQueryChaser2_3.Width = 150;
+            // 
+            // txtQueryChaser1Sent_Status_3
+            // 
+            this.txtQueryChaser1Sent_Status_3.DataPropertyName = "QueryChaser1Sent_Status";
+            this.txtQueryChaser1Sent_Status_3.HeaderText = "QueryChaser1Sent_Status";
+            this.txtQueryChaser1Sent_Status_3.MinimumWidth = 8;
+            this.txtQueryChaser1Sent_Status_3.Name = "txtQueryChaser1Sent_Status_3";
+            this.txtQueryChaser1Sent_Status_3.ReadOnly = true;
+            this.txtQueryChaser1Sent_Status_3.Width = 150;
+            // 
+            // txtQueryChaser2Sent_Status_3
+            // 
+            this.txtQueryChaser2Sent_Status_3.DataPropertyName = "QueryChaser2Sent_Status";
+            this.txtQueryChaser2Sent_Status_3.HeaderText = "QueryChaser2Sent_Status";
+            this.txtQueryChaser2Sent_Status_3.MinimumWidth = 8;
+            this.txtQueryChaser2Sent_Status_3.Name = "txtQueryChaser2Sent_Status_3";
+            this.txtQueryChaser2Sent_Status_3.ReadOnly = true;
+            this.txtQueryChaser2Sent_Status_3.Width = 150;
+            // 
+            // txtQueryChaser1Sent_Status_Date_3
+            // 
+            this.txtQueryChaser1Sent_Status_Date_3.DataPropertyName = "QueryChaser1Sent_Status_Date";
+            this.txtQueryChaser1Sent_Status_Date_3.HeaderText = "QueryChaser1Sent_Status_Date";
+            this.txtQueryChaser1Sent_Status_Date_3.MinimumWidth = 8;
+            this.txtQueryChaser1Sent_Status_Date_3.Name = "txtQueryChaser1Sent_Status_Date_3";
+            this.txtQueryChaser1Sent_Status_Date_3.ReadOnly = true;
+            this.txtQueryChaser1Sent_Status_Date_3.Width = 150;
+            // 
+            // txtQueryChaser2Sent_Status_Date_3
+            // 
+            this.txtQueryChaser2Sent_Status_Date_3.DataPropertyName = "QueryChaser2Sent_Status_Date";
+            this.txtQueryChaser2Sent_Status_Date_3.HeaderText = "QueryChaser2Sent_Status_Date";
+            this.txtQueryChaser2Sent_Status_Date_3.MinimumWidth = 8;
+            this.txtQueryChaser2Sent_Status_Date_3.Name = "txtQueryChaser2Sent_Status_Date_3";
+            this.txtQueryChaser2Sent_Status_Date_3.ReadOnly = true;
+            this.txtQueryChaser2Sent_Status_Date_3.Width = 150;
+            // 
+            // txtQueryChaser1_SentBy_3
+            // 
+            this.txtQueryChaser1_SentBy_3.DataPropertyName = "QueryChaser1_SentBy";
+            this.txtQueryChaser1_SentBy_3.HeaderText = "QueryChaser1_SentBy";
+            this.txtQueryChaser1_SentBy_3.MinimumWidth = 8;
+            this.txtQueryChaser1_SentBy_3.Name = "txtQueryChaser1_SentBy_3";
+            this.txtQueryChaser1_SentBy_3.ReadOnly = true;
+            this.txtQueryChaser1_SentBy_3.Width = 150;
+            // 
+            // txtQueryChaser2_SentBy_3
+            // 
+            this.txtQueryChaser2_SentBy_3.DataPropertyName = "QueryChaser2_SentBy";
+            this.txtQueryChaser2_SentBy_3.HeaderText = "QueryChaser2_SentBy";
+            this.txtQueryChaser2_SentBy_3.MinimumWidth = 8;
+            this.txtQueryChaser2_SentBy_3.Name = "txtQueryChaser2_SentBy_3";
+            this.txtQueryChaser2_SentBy_3.ReadOnly = true;
+            this.txtQueryChaser2_SentBy_3.Width = 150;
+            // 
+            // txtWFT_RequestID_3
+            // 
+            this.txtWFT_RequestID_3.DataPropertyName = "WFT_RequestID";
+            this.txtWFT_RequestID_3.HeaderText = "WFT_RequestID";
+            this.txtWFT_RequestID_3.MinimumWidth = 8;
+            this.txtWFT_RequestID_3.Name = "txtWFT_RequestID_3";
+            this.txtWFT_RequestID_3.ReadOnly = true;
+            this.txtWFT_RequestID_3.Width = 150;
+            // 
+            // txtTermination_Status_3
+            // 
+            this.txtTermination_Status_3.DataPropertyName = "Termination_Status";
+            this.txtTermination_Status_3.HeaderText = "Termination_Status";
+            this.txtTermination_Status_3.MinimumWidth = 8;
+            this.txtTermination_Status_3.Name = "txtTermination_Status_3";
+            this.txtTermination_Status_3.ReadOnly = true;
+            this.txtTermination_Status_3.Width = 150;
+            // 
+            // txtSynthetic_Approval_RaisedDate_3
+            // 
+            this.txtSynthetic_Approval_RaisedDate_3.DataPropertyName = "Synthetic_Approval_RaisedDate";
+            this.txtSynthetic_Approval_RaisedDate_3.HeaderText = "Synthetic_Approval_RaisedDate";
+            this.txtSynthetic_Approval_RaisedDate_3.MinimumWidth = 8;
+            this.txtSynthetic_Approval_RaisedDate_3.Name = "txtSynthetic_Approval_RaisedDate_3";
+            this.txtSynthetic_Approval_RaisedDate_3.ReadOnly = true;
+            this.txtSynthetic_Approval_RaisedDate_3.Width = 150;
+            // 
+            // txtSynthetic_Approval_Raisedtime_3
+            // 
+            this.txtSynthetic_Approval_Raisedtime_3.DataPropertyName = "Synthetic_Approval_Raisedtime";
+            this.txtSynthetic_Approval_Raisedtime_3.HeaderText = "Synthetic_Approval_Raisedtime";
+            this.txtSynthetic_Approval_Raisedtime_3.MinimumWidth = 8;
+            this.txtSynthetic_Approval_Raisedtime_3.Name = "txtSynthetic_Approval_Raisedtime_3";
+            this.txtSynthetic_Approval_Raisedtime_3.ReadOnly = true;
+            this.txtSynthetic_Approval_Raisedtime_3.Width = 150;
+            // 
+            // txtSynthetic_Approval_ReceivedDate_3
+            // 
+            this.txtSynthetic_Approval_ReceivedDate_3.DataPropertyName = "Synthetic_Approval_ReceivedDate";
+            this.txtSynthetic_Approval_ReceivedDate_3.HeaderText = "Synthetic_Approval_ReceivedDate";
+            this.txtSynthetic_Approval_ReceivedDate_3.MinimumWidth = 8;
+            this.txtSynthetic_Approval_ReceivedDate_3.Name = "txtSynthetic_Approval_ReceivedDate_3";
+            this.txtSynthetic_Approval_ReceivedDate_3.ReadOnly = true;
+            this.txtSynthetic_Approval_ReceivedDate_3.Width = 150;
+            // 
+            // txtSynthetic_Approval_ReceivedTime_3
+            // 
+            this.txtSynthetic_Approval_ReceivedTime_3.DataPropertyName = "Synthetic_Approval_ReceivedTime";
+            this.txtSynthetic_Approval_ReceivedTime_3.HeaderText = "Synthetic_Approval_ReceivedTime";
+            this.txtSynthetic_Approval_ReceivedTime_3.MinimumWidth = 8;
+            this.txtSynthetic_Approval_ReceivedTime_3.Name = "txtSynthetic_Approval_ReceivedTime_3";
+            this.txtSynthetic_Approval_ReceivedTime_3.ReadOnly = true;
+            this.txtSynthetic_Approval_ReceivedTime_3.Width = 150;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.synthetic_approval_receivedtime);
+            this.Controls.Add(this.synthetic_approval_receiveddate);
+            this.Controls.Add(this.synthetic_approval_raisedtime);
+            this.Controls.Add(this.synthetic_approval_raiseddate);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.datagridview);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkbox_termination);
@@ -1355,6 +1538,15 @@
         private System.Windows.Forms.TextBox searchby_requestid;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button datagridview;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox searchby_wftrequestid;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker synthetic_approval_raiseddate;
+        private System.Windows.Forms.DateTimePicker synthetic_approval_raisedtime;
+        private System.Windows.Forms.DateTimePicker synthetic_approval_receiveddate;
+        private System.Windows.Forms.DateTimePicker synthetic_approval_receivedtime;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRequestID3;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRequestType3;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtReceivedDate3;
@@ -1386,9 +1578,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtQueryChaser2_SentBy_3;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtWFT_RequestID_3;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtTermination_Status_3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox searchby_wftrequestid;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSynthetic_Approval_RaisedDate_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSynthetic_Approval_Raisedtime_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSynthetic_Approval_ReceivedDate_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtSynthetic_Approval_ReceivedTime_3;
     }
 }
 

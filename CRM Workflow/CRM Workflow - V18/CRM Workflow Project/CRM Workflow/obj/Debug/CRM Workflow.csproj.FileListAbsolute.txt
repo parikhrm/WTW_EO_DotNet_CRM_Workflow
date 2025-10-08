@@ -240,3 +240,6 @@ C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workf
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workflow - V18\CRM Workflow Project\CRM Workflow\obj\Debug\CRM Workflow.csproj.CoreCompileInputs.cache
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workflow - V18\CRM Workflow Project\CRM Workflow\obj\Debug\CRM Workflow.exe
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workflow - V18\CRM Workflow Project\CRM Workflow\obj\Debug\CRM Workflow.pdb
+C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workflow - V18\CRM Workflow Project\CRM Workflow\bin\Debug\CRM Workflow.exe.config
+C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workflow - V18\CRM Workflow Project\CRM Workflow\bin\Debug\CRM Workflow.exe
+C:\Users\parikhrm\source\repos\WTW_EO_DotNet_CRM_Workflow\CRM Workflow\CRM Workflow - V18\CRM Workflow Project\CRM Workflow\bin\Debug\CRM Workflow.pdb
