@@ -825,23 +825,23 @@ namespace CRM_Workflow
                     if(synthetic_approval_raiseddate.Text.Trim() != string.Empty)
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate",synthetic_approval_raiseddate.Value.Date);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime",synthetic_approval_raisedtime.Value.ToLongTimeString());
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_Raisedtime",synthetic_approval_raisedtime.Value.ToLongTimeString());
                     }
                     else
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate", DBNull.Value);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_Raisedtime", DBNull.Value);
                     }
 
                     if (synthetic_approval_receiveddate.Text.Trim() != string.Empty)
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", synthetic_approval_receiveddate.Value.Date);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", synthetic_approval_receivedtime.Value.ToLongTimeString());
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedTime", synthetic_approval_receivedtime.Value.ToLongTimeString());
                     }
                     else
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", DBNull.Value);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedTime", DBNull.Value);
                     }
 
 
@@ -1279,23 +1279,23 @@ namespace CRM_Workflow
                     if (synthetic_approval_raiseddate.Text.Trim() != string.Empty)
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate", synthetic_approval_raiseddate.Value.Date);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime", synthetic_approval_raisedtime.Value.ToLongTimeString());
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_Raisedtime", synthetic_approval_raisedtime.Value.ToLongTimeString());
                     }
                     else
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_RaisedDate", DBNull.Value);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_Raisedtime", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_Raisedtime", DBNull.Value);
                     }
 
                     if (synthetic_approval_receiveddate.Text.Trim() != string.Empty)
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", synthetic_approval_receiveddate.Value.Date);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", synthetic_approval_receivedtime.Value.ToLongTimeString());
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedTime", synthetic_approval_receivedtime.Value.ToLongTimeString());
                     }
                     else
                     {
                         cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedDate", DBNull.Value);
-                        cmd.Parameters.AddWithValue("Synthetic_Approval_ReceivedTime", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Synthetic_Approval_ReceivedTime", DBNull.Value);
                     }
                     cmd.Parameters.AddWithValue("@RequestTypeparam", requesttype.Text);
                     if (chaser1sent.Checked == true)
